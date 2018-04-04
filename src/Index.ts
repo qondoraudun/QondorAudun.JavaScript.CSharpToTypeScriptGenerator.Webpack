@@ -5,7 +5,7 @@ import path = require('path');
 import fs = require('fs');
 import process = require('process');
 
-function Plugin(outputDirectory: string, paths, options) {
+function Plugin(outputDirectory: string, paths: string[]|string, options: EmitOptions, extension?: "d.ts"|"ts" = "d.ts") {
     if(!paths)
         throw new Error('Must specify paths to use for C# to TypeScript conversion.');
 
