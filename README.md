@@ -10,9 +10,12 @@ var poco = require('@fluffy-spoon/javascript.csharp-to-typescript-generator.webp
 
 var webpackConfig = {
   plugins: [
-    poco({
-      //options go here
-    })
+    poco(
+      "dist/typings",
+      ["Models/*.cs"],
+      {
+        //options go here
+      })
   ]
 };
 ```
