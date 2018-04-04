@@ -23,6 +23,7 @@ function Plugin(outputDirectory: string, paths: string[]|string, options: EmitOp
     if(outputDirectory.startsWith(process.cwd()))
         outputDirectory = outputDirectory.substr(process.cwd().length + 1);
 
+    this.extension = extension;
     this.outputDirectory = outputDirectory;
     this.paths = newPaths;
     this.options = options;
@@ -39,12 +40,11 @@ Plugin.prototype.apply = function(compiler) {
             var emitter = new Emitter(csharpCode);
             var typescriptCode = emitter.emit(that.options);
             
-            var suffix = "d.ts";
             var fileName = path.basename(filePath);
             var outputFilePath = path
                 .join(
                     that.outputDirectory, 
-                    fileName.substring(0, fileName.length - 2) + suffix);
+                    fileName.substring(0, fileName.length - 2) + that.extension);
             compilation.assets[outputFilePath] = {
                 source: function() {
                     return typescriptCode;
