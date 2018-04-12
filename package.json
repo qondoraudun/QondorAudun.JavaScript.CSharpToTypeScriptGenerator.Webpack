@@ -1,5 +1,5 @@
 {
-  "name": "@fluffy-spoon/javascript.csharp-to-typescript-generator.webpack",
+  "name": "@fluffy-spoon/csharp-to-typescript-generator.webpack",
   "version": "1.0.0",
   "description": "```shell npm install --save-dev @fluffy-spoon/javascript.csharp-to-typescript-generator.webpack ```",
   "main": "./src/Index.js",
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/ffMathy/FluffySpoon.JavaScript.CSharpToTypeScriptGenerator.Webpack#readme",
   "dependencies": {
-    "@fluffy-spoon/javascript.csharp-to-typescript-generator": "latest",
+    "@fluffy-spoon/csharp-to-typescript-generator": "latest",
     "glob": "^7.1.2"
   },
   "devDependencies": {
