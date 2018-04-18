@@ -5,12 +5,15 @@ import path = require('path');
 import fs = require('fs');
 import process = require('process');
 
-function Plugin(outputDirectory: string, paths: string[]|string, options: EmitOptions, extension?: "d.ts"|"ts" = "d.ts") {
+function Plugin(outputDirectory: string, paths: string[]|string, options: EmitOptions, extension?: "d.ts"|"ts") {
     if(!paths)
         throw new Error('Must specify paths to use for C# to TypeScript conversion.');
 
     if(!outputDirectory)
         throw new Error('Must specify the output directory to use for C# to TypeScript conversion.');
+    
+    if(!extension)
+        extension = "d.ts";
 
     if(!Array.isArray(paths))
         paths = [paths];
