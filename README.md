@@ -1,12 +1,12 @@
 # Installing
 ```shell
-npm install --save-dev @fluffy-spoon/javascript.csharp-to-typescript-generator.webpack
+npm install --save-dev @fluffy-spoon/csharp-to-typescript-generator.webpack
 ```
 
 # Use
 ```javascript
 var gulp = require('gulp');
-var poco = require('@fluffy-spoon/javascript.csharp-to-typescript-generator.webpack');
+var poco = require('@fluffy-spoon/csharp-to-typescript-generator.webpack');
 
 var webpackConfig = {
   plugins: [
