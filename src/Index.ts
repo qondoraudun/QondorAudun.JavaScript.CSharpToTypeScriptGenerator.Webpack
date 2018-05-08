@@ -48,14 +48,17 @@ Plugin.prototype.apply = function(compiler) {
                 .join(
                     that.outputDirectory, 
                     fileName.substring(0, fileName.length - 2) + that.extension);
-            compilation.assets[outputFilePath] = {
-                source: function() {
-                    return typescriptCode;
-                },
-                size: function() {
-                    return typescriptCode.length;
-                }
-            };
+
+            (function (outputPath, ts) {
+                compilation.assets[outputPath] = {
+                    source: function() {
+                        return ts;
+                    },
+                    size: function() {
+                        return ts.length;
+                    }
+                };
+            })(outputFilePath, typescriptCode);
         }
 
         callback();
