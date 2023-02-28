@@ -1,5 +1,5 @@
 {
-  "name": "@fluffy-spoon/csharp-to-typescript-generator.webpack",
+  "name": "@qondoraudun/csharp-to-typescript-generator.webpack",
   "version": "1.0.0",
   "description": "",
   "main": "./src/Index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ffMathy/FluffySpoon.JavaScript.CSharpToTypeScriptGenerator.Webpack.git"
+    "url": "git+https://github.com/qondoraudun/QondorAudun.JavaScript.CSharpToTypeScriptGenerator.Webpack.git"
   },
-  "author": "",
+  "author": "qondoraudun",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ffMathy/FluffySpoon.JavaScript.CSharpToTypeScriptGenerator.Webpack/issues"
+    "url": "https://github.com/qondoraudun/QondorAudun.JavaScript.CSharpToTypeScriptGenerator.Webpack/issues"
   },
-  "homepage": "https://github.com/ffMathy/FluffySpoon.JavaScript.CSharpToTypeScriptGenerator.Webpack#readme",
+  "homepage": "https://github.com/qondoraudun/QondorAudun.JavaScript.CSharpToTypeScriptGenerator.Webpack#readme",
   "dependencies": {
     "@fluffy-spoon/csharp-to-typescript-generator": "latest",
     "glob": "^7.1.2"
