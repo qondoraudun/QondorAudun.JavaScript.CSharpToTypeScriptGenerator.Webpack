@@ -34,7 +34,7 @@ function Plugin(outputDirectory: string, paths: string[]|string, options: EmitOp
 
 Plugin.prototype.apply = function(compiler) {
     var that = this;
-    compiler.plugin('emit', function(compilation, callback) {				
+    compiler.hooks.emit.tapAsync('CSharpToTypescriptGeneratorPlugin', function(compilation, callback) {				
         for(let filePath of that.paths) {
             console.log("Generating TypeScript for C# file " + filePath);
 
